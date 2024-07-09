@@ -1,0 +1,247 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'freight big pro' ;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    background-color: #000;
+}
+#loader{
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    position: fixed;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+}
+#loader h1{
+    font-weight: 100;
+    font-size: 6.9vw;
+    line-height: 5vw;
+    letter-spacing: -2px;
+    position: relative;
+    z-index: 9;
+}
+#loader video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+}
+#yellow1{
+     position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#F5E41B ;
+    z-index: 8;
+}
+#yellow2{
+    position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color:#F5E41B ;
+   z-index: 7;
+}
+#nav{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    padding:30px 50px ;
+}
+#nav svg path{
+    fill: #000;
+}
+#page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #F5E41B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+}
+#page1 h1{
+    font-weight: 100;
+    font-size: 6.9vw;
+    line-height: 5vw;
+    letter-spacing: -2px;
+}
+#page2{
+    width: 100%;
+    height: 100vh;
+    background-color:#000;
+    color: #fff;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+#elem{
+    
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+#elem h2{
+    font-size: 6.8vw;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    z-index:9 ;
+    line-height:5vw ;
+}
+#elem .moving{
+    background-color: #F5E41B;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0px 0px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-0%,-45%)scaleY(0);
+    overflow: hidden;
+    transition: all ease 0.3s;
+
+}
+#elem .blur{
+    position: absolute;
+    width:30%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(to right,#f5e31be5,#F5E41B,#f5e31be5);
+    box-shadow: 10px 0px 30px 100px #F5E41B,-10px 0px 30px 100px #F5E41B  ;
+    z-index: 8;
+}
+#elem .moving .moving-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name:moving ;
+    transition: all ease 0.3s;
+    transition-delay: 0.2s;
+    animation-duration:  6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   
+    
+}
+#elem .moving .moving-in h5{
+    display: inline-block;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family:  normal;
+    font-weight: 500;
+    margin-right: 30px;
+    color: #000;
+}
+@keyframes moving {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#elem:hover .moving{
+    transform: translate(-0%,-45%)scaleY(1);
+}
+#elem:hover .moving h5{
+    opacity: 1;
+}
+#elem:hover h2{
+    font-style: italic;
+}
+#page3{
+    width: 100%;
+   min-height: 100vh;
+    background-color: #fff;
+  
+    
+}
+.images-container{
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
+   flex-wrap: wrap;
+}
+.img-div{
+    
+    width: 25vw;
+    position: relative;
+    margin: 30px;
+    cursor: pointer;
+}
+.img-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease-in 0.3s;
+    
+   
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: all ease-in 0.3s;
+    z-index: 9;
+}
+.overlay p{
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 2vw;
+    color: #fff;
+    text-align: center;
+    transition: all ease-in 0.3s;
+    opacity: 0;
+    text-align: center;
+}
+.img-div:hover .overlay{
+    opacity: 1;
+}
+.img-div:hover .overlay p{
+    opacity: 1;
+}
+.img-div:hover  img {
+    transform: scale(1.01); 
+}
+.footer{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 40px;
+}
+.footer .foot{
+    height: 50%;
+    width: 100%;
+    background-color: #000;
+}
+.footer h2{
+    cursor: pointer;
+}
